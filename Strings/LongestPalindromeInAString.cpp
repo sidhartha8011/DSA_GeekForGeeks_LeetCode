@@ -9,17 +9,14 @@ class Solution {
   
   int pallindrome(string S ,int s ,int l){
       int N=S.length();
-      int pass=0,final;
+      int final;
       while(s>=0 && l < N){
           if(S[s]!=S[l])
             break;
         s--;
         l++;
       }
-      if(pass)
-        final= s*(N+1)+l;
-      else
-        final=(s+1)*(N+1)+l;
+      final=(s+1)*(N+1)+l;
       
       return final;
   }
